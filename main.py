@@ -184,7 +184,7 @@ class GsCoreAdapter(Star):
             user_id=user_id,
             sender=sender,
             content=message,
-            msg_id=event.get_session_id(),
+            msg_id=str(event.get_session_id()),
             user_pm=pm,
         )
         logger.info(f'【发送】[gsuid-core]: {msg.bot_id}')
